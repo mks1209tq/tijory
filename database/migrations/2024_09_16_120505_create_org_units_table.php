@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('org_units', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('description')->nullable();
+            $table->string('code')->nullable();
+            $table->string('type')->nullable();
+            $table->string('status')->nullable();
+            $table->string('created_by')->nullable();
+            $table->string('updated_by')->nullable();
             $table->timestamps();
         });
     }
